@@ -21,7 +21,7 @@
 
 class Wee_DeveloperToolbar_Helper_Data extends Mage_Core_Helper_Abstract
 {
-    static public function formatBytes($bytes)  
+    public function formatBytes($bytes)
     { 
         $size = $bytes / 1024; 
         if ($size < 1024) { 
@@ -40,17 +40,17 @@ class Wee_DeveloperToolbar_Helper_Data extends Mage_Core_Helper_Abstract
         return $size; 
     }
     
-    static public function getMemoryUsage($realUsage = false)
+    public function getMemoryUsage($realUsage = false)
     {
         return memory_get_usage($realUsage);
     }
     
-    static public function formatSql($sql)
+    public function formatSql($sql)
     {
         return preg_replace('/\b(UPDATE|SET|SELECT|FROM|AS|LIMIT|ASC|COUNT|DESC|WHERE|LEFT JOIN|INNER JOIN|RIGHT JOIN|ORDER BY|GROUP BY|IN|LIKE|DISTINCT|DELETE|INSERT|INTO|VALUES)\b/', '<span class="weeDeveloperToolbarLogInfo">\\1</span>', $sql);
     }
     
-    static public function getMediaUrl()
+    public function getMediaUrl()
     {
     	return Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
     }
