@@ -2,7 +2,6 @@
 htdocs/app/etc/modules/*								app/etc/modules
 
 # code folders for every module
-htdocs/app/code/local/Wee/Base							app/code/local/Wee/Base
 htdocs/app/code/community/Wee/DeveloperToolbar			app/code/community/Wee/DeveloperToolbar
 
 # adminhtml stuff (layouts and templates). Comment this if you don't want the developer toolbar in the backend
