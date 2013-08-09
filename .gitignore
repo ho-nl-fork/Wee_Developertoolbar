@@ -1,3 +1,10 @@
+## system files
 /.settings
 /.buildpath
 /.project
+.DS_Store
+.idea
+Thumbs.db
+media/.thumbs/
+_backup
+!.gitkeep

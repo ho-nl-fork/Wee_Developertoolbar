@@ -1,0 +1,29 @@
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <strong><?php echo $this->__('Use Solr (when active)'); ?>:</strong>
+        </td>
+        <td>
+            <?php echo Mage::helper('enterprise_search')->isThirdPartSearchEngine() ? $this->__('Yes') : $this->__('No'); ?>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <strong><?php echo $this->__('Is Solr Active'); ?>:</strong>
+        </td>
+        <td>
+            <?php echo Mage::helper('enterprise_search')->isActiveEngine() ? $this->__('Yes') : $this->__('No'); ?>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <strong><?php echo $this->__('Use in catalog'); ?>:</strong>
+        </td>
+        <td>
+            <?php var_dump($this->getSearchConfigData('solr_server_use_in_catalog_navigation')); ?>
+            <?php echo $this->getSearchConfigData('solr_server_use_in_catalog_navigation') ? $this->__('Yes') : $this->__('No'); ?>
+        </td>
+    </tr>
+</table>

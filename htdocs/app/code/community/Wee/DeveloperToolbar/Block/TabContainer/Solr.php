@@ -19,12 +19,11 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Wee_DeveloperToolbar_Block_Toolbar_Item_Profiler extends Wee_DeveloperToolbar_Block_Toolbar_Item
+class Wee_DeveloperToolbar_Block_TabContainer_Solr extends Wee_DeveloperToolbar_Block_TabContainer
 {
-    public function __construct($name, $label = '')
+    public function __construct($name) 
     {
-        parent::__construct($name, $label);
-        $this->setIcon(Mage::helper('wee_developertoolbar')->getMediaUrl().'wee_developertoolbar/profiler.png');
-        $this->_content = new Wee_DeveloperToolbar_Block_TabContainer_Profiler('profiler');
+        parent::__construct($name);
+        $this->addTab(new Wee_DeveloperToolbar_Block_Tab_Solr('solr', 'solr'));
     }
 }
