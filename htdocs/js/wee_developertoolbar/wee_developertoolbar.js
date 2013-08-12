@@ -38,13 +38,11 @@ jq(function($){
 
   if (Cookie.read("wee_developertoolbar") == 0)    {
       $("#weeDeveloperToolbar").hide();
-      $("#weeDeveloperToolbarPoweredBy").hide();
   }
 
   $("#weeDeveloperToolbarContainer img:first").click(function() {
     $(".weeDeveloperToolbarDetails").hide();
     var toolbar = $("#weeDeveloperToolbar").toggle();
-    $("#weeDeveloperToolbarPoweredBy").toggle();
     var display = toolbar.attr("style");
     var toolbarHiddenExpression = /(none)/;
     if (toolbarHiddenExpression.exec(display)) {

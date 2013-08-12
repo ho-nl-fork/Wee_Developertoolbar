@@ -11,38 +11,6 @@
   border-bottom:1px solid #DDDDDD;
   padding:2px 0px;
 }
-
-#weeDeveloperToolbarPoweredBy {
-  position:absolute;
-  top:26px;
-  padding:0px 20px 2px 20px;
-  border-left:1px solid #DDDDDD;
-  border-bottom:1px solid #DDDDDD;
-  background:#FFFFFF;
-  z-index:11000;
-  right:0px;
-  float:right;
-  font-size:10px;
-  color:#666666;
-}
-
-#weeDeveloperToolbarPoweredBy a {
-  text-decoration:none;
-  color:#FF5200;
-}
-
-#weeDeveloperToolbarPoweredBy a span {
-  color:#000000;
-}
-
-#weeDeveloperToolbarPoweredBy a:hover {
-  text-decoration:underline;
-}
-
-#weeDeveloperToolbarContainer a {
-  text-decoration:none;
-  color:#666666;    
-}
  
 #weeDeveloperToolbarContainer img.magentoLogo {
   float:left;
