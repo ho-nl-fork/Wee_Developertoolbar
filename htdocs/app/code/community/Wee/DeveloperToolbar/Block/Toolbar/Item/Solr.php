@@ -25,6 +25,13 @@ class Wee_DeveloperToolbar_Block_Toolbar_Item_Solr extends Wee_DeveloperToolbar_
     {
         parent::__construct($name, $label);
         $this->setIcon(Mage::helper('wee_developertoolbar')->getMediaUrl().'wee_developertoolbar/solr.png');
+
+        if (Mage::helper('enterprise_search')->isActiveEngine()) {
+            $this->setLabel('<span style="width:8px; height:8px; display:inline-block; background:green; border-radius: 10px;">&nbsp;</span>');
+        } else {
+            $this->setLabel('<span style="width:8px; height:8px; display:inline-block; background:darkred; border-radius: 10px;">&nbsp;</span>');
+        }
+
         $this->_content = new Wee_DeveloperToolbar_Block_TabContainer_Solr('Solr');
     }
 }
