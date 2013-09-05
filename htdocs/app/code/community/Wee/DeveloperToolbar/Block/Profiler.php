@@ -19,10 +19,20 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Wee_DeveloperToolbar_Block_Profiler extends Mage_Core_Block_Profiler 
-{
-    protected function _toHtml()
+if (Mage::helper('core')->isModuleEnabled('Aoe_Profiler')) {
+
+    class Wee_DeveloperToolbar_Block_Profiler extends Aoe_Profiler_Block_Profiler
     {
-        return;
     }
+
+} else {
+
+    class Wee_DeveloperToolbar_Block_Profiler extends Mage_Core_Block_Profiler
+    {
+        protected function _toHtml()
+        {
+            return;
+        }
+    }
+
 }
