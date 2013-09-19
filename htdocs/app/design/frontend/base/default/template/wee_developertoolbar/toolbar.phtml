@@ -1,7 +1,7 @@
 <div class="weeDeveloperToolbar" id="weeDeveloperToolbarContainer">
   <img class="magentoLogo" src="<?php echo Mage::helper('wee_developertoolbar')->getMediaUrl().'wee_developertoolbar/logo.png'; ?>" alt="" />
     <?php if ($this->getItems()): ?>
-    <ul id="weeDeveloperToolbar" class="unstyled" style="margin-bottom:0;">
+    <ul id="weeDeveloperToolbar" class="unstyled list-unstyled" style="margin-bottom:0;">
         <?php foreach ($this->getItems() as $item): ?>
           <?php echo $item->render(); ?>
         <?php endforeach ?>

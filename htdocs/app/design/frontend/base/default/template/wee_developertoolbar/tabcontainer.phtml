@@ -1,7 +1,7 @@
 <?php if ($this->getTabs()): ?>
 
 <div class="tabContainer" id="tabContainer_<?php echo $this->getName(); ?>">
-  <ul class="tabContainer unstyled">
+  <ul class="tabContainer unstyled list-unstyled">
     <?php foreach ($this->getTabs() as $tab): ?>
       <li id="tab_<?php echo $tab->getName();?>" class="tab_<?php echo $tab->getName();?> <?php echo ($tab->isActive() ? 'active' : '') ?>">
         <a href="javascript:void(0);"><?php echo $tab->getLabel(); ?></a>

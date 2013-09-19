@@ -64,7 +64,7 @@ jq(function($){
     $("#tabContent_"+id).show();
   });
     
-  $("#weeDeveloperToolbar li.content").click(function() {
+  $("#weeDeveloperToolbar li.has-content").click(function() {
     var id = $(this).attr("id").split("_");
     id = id[1];
     $(".weeDeveloperToolbarDetails").each(function(e) {
