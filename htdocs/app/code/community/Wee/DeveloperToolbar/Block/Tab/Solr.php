@@ -27,4 +27,21 @@ class Wee_DeveloperToolbar_Block_Tab_Solr extends Wee_DeveloperToolbar_Block_Tab
         $this->setTemplate('wee_developertoolbar/tab/solr.phtml');
         $this->setIsActive(true);
     }
+
+    public function getMode() {
+        if ($this->_mode) {
+            return $this->_mode;
+        }
+        elseif (in_array(Mage::helper('mana_core')->getRoutePath(), array('catalogsearch/result/index', 'manapro_filterajax/search/index'))) {
+            return 'search';
+        }
+        else {
+            return 'category';
+        }
+    }
+
+    public function getIsEngineAvailableForNavigation() {
+        $catalog = $this->getMode() == 'category';
+        return Mage::helper('enterprise_search')->getIsEngineAvailableForNavigation($catalog);
+    }
 }

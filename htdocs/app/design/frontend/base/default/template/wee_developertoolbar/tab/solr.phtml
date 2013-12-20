@@ -1,10 +1,11 @@
 <?php
+/** @var Wee_DeveloperToolbar_Block_Tab_Solr $this */
 $_seachHelper = Mage::helper('enterprise_search');
 ?>
 <table border="0" cellpadding="0" cellspacing="0">
     <tr>
         <td>
-            <strong><?php echo $this->__('Use Solr'); ?>:</strong>
+            <strong><?php echo $this->__('Solr Configured'); ?>:</strong>
         </td>
         <td>
             <?php echo $_seachHelper->isThirdPartSearchEngine() ? $this->__('Yes') : $this->__('No'); ?>
@@ -13,7 +14,7 @@ $_seachHelper = Mage::helper('enterprise_search');
 
     <tr>
         <td>
-            <strong><?php echo $this->__('Use in catalog'); ?>:</strong>
+            <strong><?php echo $this->__('Configured to be used in navigation'); ?>:</strong>
         </td>
         <td>
             <?php echo $_seachHelper->getSearchConfigData('solr_server_use_in_catalog_navigation') ? $this->__('Yes') : $this->__('No'); ?>
@@ -22,10 +23,10 @@ $_seachHelper = Mage::helper('enterprise_search');
 
     <tr>
         <td>
-            <strong><?php echo $this->__('Is engine currently active'); ?>:</strong>
+            <strong><?php echo $this->__('Is engine used for %s', $this->getMode()); ?>:</strong>
         </td>
         <td>
-            <?php echo $_seachHelper->isActiveEngine() ? $this->__('Yes') : $this->__('No'); ?>
+            <?php echo $this->getIsEngineAvailableForNavigation() ? $this->__('Yes') : $this->__('No'); ?>
         </td>
     </tr>
 </table>

@@ -26,12 +26,30 @@ class Wee_DeveloperToolbar_Block_Toolbar_Item_Solr extends Wee_DeveloperToolbar_
         parent::__construct($name, $label);
         $this->setIcon(Mage::helper('wee_developertoolbar')->getMediaUrl().'wee_developertoolbar/solr.png');
 
-        if (Mage::helper('enterprise_search')->isActiveEngine()) {
+        if ($this->getIsEngineAvailableForNavigation()) {
             $this->setLabel('<span style="width:8px; height:8px; display:inline-block; background:green; border-radius: 10px;">&nbsp;</span>');
         } else {
             $this->setLabel('<span style="width:8px; height:8px; display:inline-block; background:darkred; border-radius: 10px;">&nbsp;</span>');
         }
 
         $this->_content = new Wee_DeveloperToolbar_Block_TabContainer_Solr('Solr');
+    }
+
+
+    public function getMode() {
+        if ($this->_mode) {
+            return $this->_mode;
+        }
+        elseif (in_array(Mage::helper('mana_core')->getRoutePath(), array('catalogsearch/result/index', 'manapro_filterajax/search/index'))) {
+            return 'search';
+        }
+        else {
+            return 'category';
+        }
+    }
+
+    public function getIsEngineAvailableForNavigation() {
+        $catalog = $this->getMode() == 'category';
+        return Mage::helper('enterprise_search')->getIsEngineAvailableForNavigation($catalog);
     }
 }
