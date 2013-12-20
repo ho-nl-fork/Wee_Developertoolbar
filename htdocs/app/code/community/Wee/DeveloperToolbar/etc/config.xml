@@ -28,16 +28,6 @@
                 </rewrite>
             </core>
         </models>
-        <events>
-            <controller_action_layout_render_before>
-                <observers>
-                    <wee_developertoolbar_observer_1>
-                        <class>Wee_DeveloperToolbar_Model_Observer</class>
-                        <method>removeCoreProfilerBlock</method>
-                    </wee_developertoolbar_observer_1>
-                </observers>
-            </controller_action_layout_render_before>
-        </events>
     </global>
     <adminhtml>
         <layout>

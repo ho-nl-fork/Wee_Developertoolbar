@@ -32,7 +32,6 @@ class Wee_DeveloperToolbar_Block_Toolbar extends Wee_DeveloperToolbar_Block_Temp
     {
         $this->_addItem(new Wee_DeveloperToolbar_Block_Toolbar_Item_Version('version'));
         $this->_addItem(new Wee_DeveloperToolbar_Block_Toolbar_Item_Info('info', 'info'));
-        $this->_addItem(new Wee_DeveloperToolbar_Block_Toolbar_Item_Profiler('profiler', 'profiler'));
         $this->_addItem(new Wee_DeveloperToolbar_Block_Toolbar_Item_Time('time'));
         $this->_addItem(new Wee_DeveloperToolbar_Block_Toolbar_Item_Memory('memory'));
         $this->_addItem(new Wee_DeveloperToolbar_Block_Toolbar_Item_Database('database'));
