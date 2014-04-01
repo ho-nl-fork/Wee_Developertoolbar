@@ -30,6 +30,6 @@ class Wee_DeveloperToolbar_Block_TabContainer_Info extends Wee_DeveloperToolbar_
         $this->addTab(new Wee_DeveloperToolbar_Block_Tab_Events('events', 'Events/Observer'));
         $this->addTab(new Wee_DeveloperToolbar_Block_Tab_Blocks('blocks', 'Blocks'));
         $this->addTab(new Wee_DeveloperToolbar_Block_Tab_Config('config', 'Config'));
-        $this->addTab(new Wee_DeveloperToolbar_Block_Tab_PhpInfo('phpinfo', 'PHP-Info'));
+//        $this->addTab(new Wee_DeveloperToolbar_Block_Tab_PhpInfo('phpinfo', 'PHP-Info'));
     }
 }
