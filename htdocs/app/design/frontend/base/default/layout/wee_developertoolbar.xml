@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
-    <default>
+    <wee_developertoolbar>
         <reference name="head">
             <action method="addItem"><type>js_css</type><name>wee_developertoolbar/wee_developertoolbar.css</name></action>
             <action method="addJs"><script>wee_developertoolbar/jquery-1.6.min.js</script></action>
@@ -9,5 +9,5 @@
         <reference name="before_body_end">
             <block type="wee_developertoolbar/toolbar" name="wee_developertoolbar" template="wee_developertoolbar/toolbar.phtml" />
         </reference>
-    </default>
+    </wee_developertoolbar>
 </layout>
