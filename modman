@@ -1,17 +1,8 @@
-# module xml files
-htdocs/app/etc/modules/*								app/etc/modules
-
-# code folders for every module
-htdocs/app/code/community/Wee/DeveloperToolbar			app/code/community/Wee/DeveloperToolbar
-
-# adminhtml stuff (layouts and templates). Comment this if you don't want the developer toolbar in the backend
-htdocs/app/design/adminhtml/default/default/layout/*	app/design/adminhtml/default/default/layout/
-htdocs/app/design/adminhtml/default/default/template/wee_developertoolbar	app/design/adminhtml/default/default/template/wee_developertoolbar
-
-# frontend stuff (layouts and templates)
-htdocs/app/design/frontend/base/default/layout/*		app/design/frontend/base/default/layout/
-htdocs/app/design/frontend/base/default/template/wee_developertoolbar	app/design/frontend/base/default/template/wee_developertoolbar
-
-htdocs/js/wee_developertoolbar							js/wee_developertoolbar
-
-htdocs/media/wee_developertoolbar						media/wee_developertoolbar
+htdocs/app/etc/modules/*                            app/etc/modules
+htdocs/app/code/community/Wee/*                     app/code/community/Wee/
+htdocs/app/design/frontend/base/default/layout/*	app/design/frontend/base/default/layout/
+htdocs/app/design/frontend/base/default/template/*	app/design/frontend/base/default/template/
+htdocs/app/design/frontend/base/default/layout/*	app/design/adminhtml/default/default/layout/
+htdocs/app/design/frontend/base/default/template/*	app/design/adminhtml/default/default/template/
+htdocs/skin/frontend/base/default/*                 skin/frontend/base/default/
+htdocs/skin/frontend/base/default/*                 skin/adminhtml/default/default/

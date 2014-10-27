@@ -24,7 +24,7 @@ class Wee_DeveloperToolbar_Block_Toolbar_Item_Database extends Wee_DeveloperTool
     public function __construct($name, $label = '')
     {
         parent::__construct($name, $label);
-        $this->setIcon(Mage::helper('wee_developertoolbar')->getMediaUrl().'wee_developertoolbar/database.png');
+        $this->setIcon($this->getSkinUrl('wee_developertoolbar/images/database.png'));
         $this->_content = new Wee_DeveloperToolbar_Block_TabContainer_Database('database');
     }
 

@@ -24,7 +24,7 @@ class Wee_DeveloperToolbar_Block_Toolbar_Item_Memory extends Wee_DeveloperToolba
     public function __construct($name, $label = '')
     {
         parent::__construct($name, $label);
-        $this->setIcon(Mage::helper('wee_developertoolbar')->getMediaUrl().'wee_developertoolbar/memory.png');
+        $this->setIcon($this->getSkinUrl('wee_developertoolbar/images/memory.png'));
     }
     
     public function getLabel()

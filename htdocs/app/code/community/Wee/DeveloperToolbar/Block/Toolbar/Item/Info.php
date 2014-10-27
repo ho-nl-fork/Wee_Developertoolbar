@@ -24,7 +24,7 @@ class Wee_DeveloperToolbar_Block_Toolbar_Item_Info extends Wee_DeveloperToolbar_
     public function __construct($name, $label = '')
     {
         parent::__construct($name, $label);
-        $this->setIcon(Mage::helper('wee_developertoolbar')->getMediaUrl().'wee_developertoolbar/info.png');
+        $this->setIcon($this->getSkinUrl('wee_developertoolbar/images/info.png'));
         $this->_content = new Wee_DeveloperToolbar_Block_TabContainer_Info('info');
     }
 }

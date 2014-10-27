@@ -24,7 +24,7 @@ class Wee_DeveloperToolbar_Block_Toolbar_Item_Time extends Wee_DeveloperToolbar_
     public function __construct($name, $label = '')
     {
         parent::__construct($name, $label);
-        $this->setIcon(Mage::helper('wee_developertoolbar')->getMediaUrl().'/wee_developertoolbar/time.png');
+        $this->setIcon($this->getSkinUrl('wee_developertoolbar/images/time.png'));
     }
     
     public function getLabel()

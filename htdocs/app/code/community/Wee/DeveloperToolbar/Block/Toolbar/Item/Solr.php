@@ -24,7 +24,7 @@ class Wee_DeveloperToolbar_Block_Toolbar_Item_Solr extends Wee_DeveloperToolbar_
     public function __construct($name, $label = '')
     {
         parent::__construct($name, $label);
-        $this->setIcon(Mage::helper('wee_developertoolbar')->getMediaUrl().'wee_developertoolbar/solr.png');
+        $this->setIcon($this->getSkinUrl('wee_developertoolbar/images/solr.png'));
 
         if ($this->getIsEngineAvailableForNavigation()) {
             $this->setLabel('<span style="width:8px; height:8px; display:inline-block; background:green; border-radius: 10px;">&nbsp;</span>');

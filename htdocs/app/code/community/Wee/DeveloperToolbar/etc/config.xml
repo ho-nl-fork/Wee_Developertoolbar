@@ -28,6 +28,17 @@
                 </rewrite>
             </core>
         </models>
+        <events>
+            <controller_action_layout_load_before>
+                <observers>
+                    <wee_developertoolbar>
+                        <type>singleton</type>
+                        <class>Wee_DeveloperToolbar_Model_Observer</class>
+                        <method>addWeeDeveloperToolbarHandle</method>
+                    </wee_developertoolbar>
+                </observers>
+            </controller_action_layout_load_before>
+        </events>
     </global>
     <adminhtml>
         <layout>
@@ -55,16 +66,5 @@
                 </wee_developertoolbar>
             </updates>
         </layout>
-        <events>
-            <controller_action_layout_load_before>
-                <observers>
-                    <wee_developertoolbar>
-                        <type>singleton</type>
-                        <class>Wee_DeveloperToolbar_Model_Observer</class>
-                        <method>addWeeDeveloperToolbarHandle</method>
-                    </wee_developertoolbar>
-                </observers>
-            </controller_action_layout_load_before>
-        </events>
     </frontend>
 </config>
