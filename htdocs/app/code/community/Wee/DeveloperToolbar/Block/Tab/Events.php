@@ -46,7 +46,14 @@ class Wee_DeveloperToolbar_Block_Tab_Events extends Wee_DeveloperToolbar_Block_T
                 if ($eventConfig instanceof Mage_Core_Model_Config_Element) {
                    $areaEvents = $eventConfig->children();
                    foreach ($areaEvents as $eventName => $event) {
-                       foreach ($event->observers->children() as $observerName => $observer) {
+                       /** @var Mage_Core_Model_Config_Element $observers */
+                       $observers = $event->observers;
+
+                       if (! $observers || ! $observers->hasChildren()) {
+                           continue;
+                       }
+
+                       foreach ($observers->children() as $observerName => $observer) {
                            $observerData = array(
                                'name' => $observerName,
                                'class' => Mage::app()->getConfig()->getModelClassName($observer->class),
