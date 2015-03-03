@@ -3,7 +3,8 @@
 class Wee_DeveloperToolbar_Model_Observer
 {
     public function addWeeDeveloperToolbarHandle(Varien_Event_Observer $observer) {
-        if (Mage::getStoreConfigFlag('advanced/modules_disable_output/Wee_DeveloperToolbar')) {
+        if (Mage::getStoreConfigFlag('advanced/modules_disable_output/Wee_DeveloperToolbar')
+            || Mage::app()->useCache('full_page')) {
             return;
         }
 
