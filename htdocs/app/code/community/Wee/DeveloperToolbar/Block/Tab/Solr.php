@@ -32,12 +32,14 @@ class Wee_DeveloperToolbar_Block_Tab_Solr extends Wee_DeveloperToolbar_Block_Tab
         if ($this->_mode) {
             return $this->_mode;
         }
-        elseif (in_array(Mage::helper('mana_core')->getRoutePath(), array('catalogsearch/result/index', 'manapro_filterajax/search/index'))) {
-            return 'search';
+
+        if (Mage::helper('core')->isModuleEnabled('Mana_Core')) {
+            if (in_array(Mage::helper('mana_core')->getRoutePath(), array('catalogsearch/result/index', 'manapro_filterajax/search/index'))) {
+                return 'search';
+            }
         }
-        else {
-            return 'category';
-        }
+
+        return 'category';
     }
 
     public function getIsEngineAvailableForNavigation() {
