@@ -21,13 +21,6 @@
                 </rewrite>
             </wee_developertoolbar>
         </helpers>
-        <models>
-            <core>
-                <rewrite>
-                    <resource>Wee_DeveloperToolbar_Model_Resource</resource>
-                </rewrite>
-            </core>
-        </models>
         <events>
             <controller_action_layout_load_before>
                 <observers>
